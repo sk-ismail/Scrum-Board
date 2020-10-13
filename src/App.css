@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.App {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.main {
+  background-image: url(alexis-fauvet-u96-HA3rlv8-unsplash.jpg);
+  background-size: 100vh;
+  height: 100vh;
+}
+
+input {
+  min-width: 300px;
+  min-height: 40px;
+  border-radius: 10px;
+  text-indent: 10px;
+  outline: none;
+}
+
+.addBtn {
+  outline: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 5px;
+  padding: 5px;
+  width: 3.2rem;
+  font-weight: bold;
+}
+.addBtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: rgb(240, 239, 239);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px rgb(78, 77, 77);
+  max-height: 450px;
+}
+
+.droppable-col {
+  width: 100%;
+  background-color: rgb(240, 239, 239);
+  padding: 10px 10px 0 10px;
+  border-radius: 7px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.item {
+  margin-bottom: 10px;
+  background-color: rgb(253, 253, 253);
+  color: black;
+  border: 0px solid black;
+  padding: 15px;
+  box-shadow: 0px 5px 5px rgb(78, 77, 77);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  overflow-x: auto;
+  transition-duration: 150ms;
+}
+.item:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 3px rgb(78, 77, 77);
+}
+
+.dragging {
+  background-color: rgb(240, 158, 158);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.dropping {
+  background-color: seagreen;
+}
+h1 {
+  animation-name: myanime;
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
+}
+
+@keyframes myanime {
+  0% {
+    transform: translate(0px, 0px);
+    color: red;
+  }
+  25% {
+    color: rgb(227, 248, 41);
+  }
+  50% {
+    transform: translate(0px, -7px);
+    color: green;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    color: yellowgreen;
+  }
+}
+
+.delBtn {
+  outline: none;
+  text-decoration: none;
+  color: black;
+  background: none;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 55px;
+}
+
+.delBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .App {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 200px;
+  }
+  .droppable-col {
+    width: 100%;
+    background-color: rgb(240, 239, 239);
+    padding: 10px 10px 0 10px;
+    border-radius: 7px;
+    min-width: 300px;
+    display: flex;
+    margin-left: 0px;
+    flex-direction: column;
+    overflow-y: scroll;
+    align-items: center;
+  }
+  .column {
+    border: 1px solid black;
+    background-color: rgb(240, 239, 239);
+    margin: 10px;
+    width: 70%;
+    max-height: 350px;
+  }
+  .item {
+    margin-bottom: 10px;
+    background-color: rgb(253, 253, 253);
+
+    color: black;
+    border: 0px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    overflow-x: auto;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addBtn {
+  margin-left: 5px;
+}
+.additem {
+  align-items: center;
+  margin: 10px;
+}
+.delBtn {
+  margin-left: 10px;
+}
